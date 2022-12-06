@@ -2,6 +2,10 @@ package gameClZn;
 
 import java.util.*;
 
+/** Создан класс Игра
+ * используя метод печатьИгроков при помощи цикла форич распечатываем список игроков
+ *  с указанием лиги и результата в очках
+ */
 public class Game {
     public  void printPlayers(List<Player> players){
         for (Player player : players){
@@ -10,6 +14,10 @@ public class Game {
         }
     }
 
+    /** Метод проведения игры - используя циклы фор и получаем двух игроков из списка игроков лиги
+     *
+     * @param players
+     */
     public void makeGame(List<Player> players) {
 
         for (int i = 0; i<players.size()-1; i++){
@@ -19,7 +27,9 @@ public class Game {
                 resultGame(player1, player2);
             }
         }
-
+/** используя компаратор сравнием игроков по очкам и отсортировываем список игроков лиги
+ *
+ */
         Collections.sort(players, new Comparator<Player>() {
             @Override
             public int compare(Player o1, Player o2) {
@@ -28,29 +38,14 @@ public class Game {
         });
         printPlayers(players);
 
-        // НАДО ПОДУМАТЬ!!!!
 
-//        List<Player> winners = new ArrayList<>();
-//
-//        public List<Player> getWinners( List<Player> players) {
-//               for (int i = 0; i < 3; i++) {
-//
-//                winners.add(players.get(i));
-//                changeLeaguePlus(players.get(i));
-//            }
-//
-//        }
-
-//        LinkedList<Player> winners = new LinkedList<Player>();
-//
-//        public  void printWinners(List<Player> players){
-//
-//        for (int i = 0; i < 3; i++) {
-//            winners.add(i);
-//        }
-//        printPlayers(winners);
     }
 
+    /**
+     * используя метод математического рандома (0 и 1) получаем результат игры и добавляем победителю 2 очка
+     * @param player1
+     * @param player2
+     */
 
     public void resultGame(Player player1, Player player2){
        if (Math.random()>0.5)
@@ -58,6 +53,11 @@ public class Game {
        else player1.addScore(2);
     }
 
+    /**
+     * Метод смены лиги - если у игрока лига соответствует меньшей лиге, то присваивается занчение следующей лиги
+     * и обнуляется количество очков
+     * @param player
+     */
     public void changeLeaguePlus(Player player) {
         if (player.getLeague().equals(League.JUNIORS)) {
             player.setLeague(League.STUDENTS);

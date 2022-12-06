@@ -42,3 +42,34 @@ First level: Итак.
 В каждой лиге минимум 25 человек
 Сделать класс который генерирует Участников - использовать faker библиотеку
 Лиг минимум 3
+
+
+
+       // НАДО ПОДУМАТЬ!!!!
+
+//        List<Player> winners = new ArrayList<>();
+//
+//        public List<Player> getWinners( List<Player> players) {
+//               for (int i = 0; i < 3; i++) {
+//
+//                winners.add(players.get(i));
+//                changeLeaguePlus(players.get(i));
+//            }
+//
+//        }
+
+//        LinkedList<Player> winners = new LinkedList<Player>();
+//
+//        public  void printWinners(List<Player> players){
+//
+//        for (int i = 0; i < 3; i++) {
+//            winners.add(i);
+//        }
+//        printPlayers(winners);
+    }
+
+
+  /**результат игры определяется методом математического рандома
+         * 0 и 1, победитель получает 2 очка
+         */
+

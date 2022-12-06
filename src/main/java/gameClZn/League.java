@@ -1,5 +1,8 @@
 package gameClZn;
 
+/** Класс энамов используется для названия лиг
+ * методы отсутствуют
+ */
 public enum League {
     JUNIORS,
     STUDENTS,
